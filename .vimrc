@@ -74,13 +74,19 @@ function FindSessionDirectory() abort
   return getcwd()
 endfunction!
 
+" Session restoring
 autocmd vimenter * silent! lcd %:p:h
 autocmd VimEnter * nested :call LoadSession()
 autocmd VimLeave * :tabdo NERDTreeClose
 autocmd VimLeave * :call MakeSession()
 
+" Open as new tab, quit on open, delete buffers automatically, get rid of
+" unwanted stuff from NERDTree
 let NERDTreeCustomOpenArgs={'file':{'where': 't'}}
 let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+
+" Set indentation
+set ts=4 sw=4
