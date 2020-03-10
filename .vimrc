@@ -25,10 +25,12 @@ let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 
 " Mappings (Old habits die hard)
-silent! nmap <F3> :NERDTreeToggle %<CR>
-silent! nmap <Tab> :CtrlP<CR>
+silent! nmap <F3> :NERDTreeToggle<CR>
+
+nnoremap <silent> <Tab> 1gt
 nnoremap <S-Left> :tabprevious<CR>
 nnoremap <S-Right> :tabnext<CR>
+
 nnoremap <silent> <C-Right> <c-w>l
 nnoremap <silent> <C-Left> <c-w>h
 nnoremap <silent> <C-Up> <c-w>k
@@ -83,9 +85,8 @@ autocmd VimLeave * :call MakeSession()
 " Open as new tab, quit on open, delete buffers automatically, get rid of
 " unwanted stuff from NERDTree
 let NERDTreeCustomOpenArgs={'file':{'where': 't'}}
-let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeMinimalUI = 1
+let NERDTreeMinimalUI = 0
 let NERDTreeDirArrows = 1
 
 " Set indentation
