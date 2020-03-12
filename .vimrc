@@ -31,10 +31,15 @@ nnoremap <silent> <Tab> 1gt
 nnoremap <S-Left> :tabprevious<CR>
 nnoremap <S-Right> :tabnext<CR>
 
-nnoremap <silent> <C-Right> <c-w>l
-nnoremap <silent> <C-Left> <c-w>h
-nnoremap <silent> <C-Up> <c-w>k
-nnoremap <silent> <C-Down> <c-w>j
+nmap <C-Left> b
+nmap <C-Right> w
+nnoremap <C-Up> 3k
+nnoremap <C-Down> 3j
+
+"nnoremap <silent> <C-Right> <c-w>l
+"nnoremap <silent> <C-Left> <c-w>h
+"nnoremap <silent> <C-Up> <c-w>k
+"nnoremap <silent> <C-Down> <c-w>j
 
 " Colorscheme
 :colorscheme atom-dark-256
