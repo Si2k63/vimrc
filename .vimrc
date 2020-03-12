@@ -61,6 +61,7 @@ function! MakeSession()
     redraw!
   endif
   let b:filename = b:sessiondir . '/session.vim'
+  set sessionoptions-=options
   exe "mksession! " . b:filename
 endfunction
 
