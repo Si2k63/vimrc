@@ -5,12 +5,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
+Plugin 'scrooloose/nerdtree'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'itchyny/lightline.vim'
 Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'valloric/youcompleteme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
