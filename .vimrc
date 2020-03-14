@@ -84,7 +84,11 @@ endfunction!
 
 " Session restoring
 autocmd vimenter * silent! lcd %:p:h
-autocmd VimEnter * nested :call LoadSession()
+
+if (argc() == 0 || isdirectory(argv()[0]))
+	autocmd VimEnter * nested :call LoadSession()
+endif
+
 autocmd VimLeave * :tabdo NERDTreeClose
 autocmd VimLeave * :call MakeSession()
 
