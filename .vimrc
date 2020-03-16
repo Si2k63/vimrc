@@ -66,9 +66,12 @@ function! MakeSession()
 endfunction
 
 function! LoadSession()
-  let b:sessiondir = $HOME . "/.vim/sessions" . FindSessionDirectory()
+  let b:projectdir = FindSessionDirectory()
+  let b:sessiondir = $HOME . "/.vim/sessions" . b:projectdir
   let b:sessionfile = b:sessiondir . "/session.vim"
+
   if (filereadable(b:sessionfile))
+  	exe 'tabedit ' b:projectdir
     exe 'source ' b:sessionfile
   else
     echo "No session loaded."
